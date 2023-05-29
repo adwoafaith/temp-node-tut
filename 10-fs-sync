@@ -1,0 +1,28 @@
+//interacting with the file system ,the module and the name of the module is fs
+//synchronousle-non blocking
+//asynchronously-blocking
+//this is all about reading the contents in a folder
+//synchronous approach
+const {readFileSync,writeFileSync}=require('fs')
+console.log('start')
+//to read file you have to provide the path and the encoded
+
+const first=readFileSync('./content/first.txt','utf8')
+const second=readFileSync('./content/second.txt','utf8')
+console.log(first+'/'+second)
+//creating a new file
+//the method is write filesync
+//two paramenter the file name and the values
+
+writeFileSync('./content/result-sync.txt',`Here is the result : ${first},${second}`)
+//appendind to the file
+//you have to add a third argument which is an object and set the flag to a
+
+// writeFileSync('./content/result-sync.txt',
+// `Here is the result : ${first},${second}`,{flag:'a'})
+// console.log("done with this task")
+// console.log('starting the next one')
+
+//anothe way
+const fs=require('fs')
+fs.readFileSync 
